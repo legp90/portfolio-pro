@@ -14,11 +14,7 @@ function App() {
     <div className="flex min-h-screen flex-col">
       <Navbar brand="portfolio.pro" items={NAV_ITEMS} />
       <main className="flex-1">
-        <Hero
-          name="Building elegant, performant web experiences."
-          role="Frontend Engineer"
-          tagline="I craft modern interfaces with React, TypeScript, and a focus on clean architecture, accessibility, and developer experience."
-        />
+      <Hero />
         <About />
         <Projects />
         <Skills />
