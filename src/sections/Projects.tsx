@@ -1,0 +1,116 @@
+import React from 'react';
+
+interface Project {
+  title: string;
+  description: string;
+  techStack: string[];
+  githubUrl: string;
+  liveUrl: string;
+  image?: string;
+}
+
+export const Projects: React.FC = () => {
+  const projectsData: Project[] = [ {
+    title: 'AI Assistant Lab',
+    description: 'Laboratorio interactivo de ingeniería de prompts con gestión de historial dinámico y un sistema de contingencia (fallback) local resiliente ante limitaciones de cuotas de API externas.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Vercel'],
+    githubUrl: 'https://github.com/legp90/ai-content-assistant',
+    liveUrl: 'https://ai-content-assistant-alpha.vercel.app',
+    image: '/ai-lab.png',
+  },
+    {
+      title: 'Enterprise SaaS Analytics Dashboard',
+      description: 'A high-performance business intelligence dashboard featuring interactive data visualizations, real-time metrics, and advanced user role management. Optimized for minimal rendering overhead.',
+      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Context API'],
+      githubUrl: 'https://github.com/legp90',
+      liveUrl: '#',
+    },
+    {
+      title: 'E-Commerce Ecosystem & Checkout',
+      description: 'A full-featured digital storefront with complex state management for cart operations, global product filtering, and a fully mocked Stripe payment gateway integration with secure client-side validation.',
+      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Local Storage', 'REST APIs'],
+      githubUrl: 'https://github.com/legp90',
+      liveUrl: '#',
+    },
+    {
+      title: 'AI-Powered Intelligent Content Assistant',
+      description: 'An AI productivity tool leveraging large language model APIs to automate content generation. Built with strict error-handling, prompt engineering integration, and custom streaming UI components.',
+      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'OpenAI API', 'Axios'],
+      githubUrl: 'https://github.com/legp90',
+      liveUrl: '#',
+    },
+  ];
+
+  return (
+    <section id="projects" className="max-w-4xl mx-auto px-4 py-20 border-t border-zinc-800/80">
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 tracking-tight flex items-center gap-3">
+        <span className="text-blue-500 font-mono text-xl">03.</span> Showcase Projects
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projectsData.map((project, index) => (
+          <div 
+            key={index}
+            className="flex flex-col bg-zinc-900/40 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-700/60 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-300 group"
+          >
+            {/* Project Screenshot Placeholder */}
+            {project.image ? (
+              <img
+  src={project.image}
+  alt={project.title}
+  className="w-full h-44 object-cover object-top" // object-top es clave para mostrar la parte superior de la captura
+/>
+) : (
+  <div className="h-44 bg-zinc-800/50 flex items-center justify-center">
+    <span className="text-zinc-600 font-mono text-xs uppercase">
+      [ {project.title.split(' ')[0]} Preview ]
+    </span>
+  </div>
+)}
+
+            {/* Project Content */}
+            <div className="p-5 flex flex-col flex-grow">
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                {project.title}
+              </h3>
+              
+              <p className="text-zinc-400 text-sm mb-5 leading-relaxed flex-grow">
+                {project.description}
+              </p>
+
+              {/* Tech Badges */}
+              <div className="flex flex-wrap gap-1.5 mb-6">
+                {project.techStack.map((tech, i) => (
+                  <span 
+                    key={i}
+                    className="px-2 py-0.5 text-[10px] font-mono font-medium rounded bg-zinc-800 text-zinc-400 border border-zinc-700/30"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action Links */}
+              <div className="flex items-center gap-4 text-sm font-mono mt-auto">
+                <a 
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  Code →
+                </a>
+                <a 
+                  href={project.liveUrl}
+                  className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
+                >
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
