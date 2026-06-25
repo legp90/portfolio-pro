@@ -18,13 +18,14 @@ export const Projects: React.FC = () => {
     liveUrl: 'https://ai-content-assistant-alpha.vercel.app',
     image: '/ai-lab.png',
   },
-    {
-      title: 'Enterprise SaaS Analytics Dashboard',
-      description: 'A high-performance business intelligence dashboard featuring interactive data visualizations, real-time metrics, and advanced user role management. Optimized for minimal rendering overhead.',
-      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Context API'],
-      githubUrl: 'https://github.com/legp90',
-      liveUrl: '#',
-    },
+  {
+    title: "Enterprise SaaS Analytics Dashboard",
+    description: "Un panel de control de alto rendimiento para aplicaciones SaaS. Permite visualizar métricas clave como el MRR y la tasa de abandono, utilizando gráficos interactivos dinámicos y tablas de datos con filtrado avanzado en tiempo real.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Lucide React"],
+    liveUrl: "https://saas-analytics-dashboard-gilt.vercel.app/", // Pon aquí el link de Vercel de tu Proyecto 2
+    githubUrl: "https://github.com/legp90/saas-analytics-dashboard", // Pon aquí el link de GitHub de tu Proyecto 2
+    image: '/saas-dashboard.png',
+  },
     {
       title: 'E-Commerce Ecosystem & Checkout',
       description: 'A full-featured digital storefront with complex state management for cart operations, global product filtering, and a fully mocked Stripe payment gateway integration with secure client-side validation.',
@@ -32,13 +33,7 @@ export const Projects: React.FC = () => {
       githubUrl: 'https://github.com/legp90',
       liveUrl: '#',
     },
-    {
-      title: 'AI-Powered Intelligent Content Assistant',
-      description: 'An AI productivity tool leveraging large language model APIs to automate content generation. Built with strict error-handling, prompt engineering integration, and custom streaming UI components.',
-      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'OpenAI API', 'Axios'],
-      githubUrl: 'https://github.com/legp90',
-      liveUrl: '#',
-    },
+
   ];
 
   return (
