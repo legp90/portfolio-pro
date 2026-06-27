@@ -27,11 +27,12 @@ export const Projects: React.FC = () => {
     image: '/saas-dashboard.png',
   },
     {
-      title: 'E-Commerce Ecosystem & Checkout',
-      description: 'A full-featured digital storefront with complex state management for cart operations, global product filtering, and a fully mocked Stripe payment gateway integration with secure client-side validation.',
-      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Local Storage', 'REST APIs'],
-      githubUrl: 'https://github.com/legp90',
-      liveUrl: '#',
+    title: "E-Commerce Ecosystem & Checkout",
+    description: "Una plataforma de comercio electrónico completa con gestión de estado global para el carrito de compras, filtrado avanzado de productos y un flujo de checkout optimizado con simulación de pasarela de pago y validaciones estrictas.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Context API", "Lucide React"], // Ajusta si usaste otra cosa para el estado global
+    liveUrl: "https://ecommerce-ecosystem.vercel.app",
+    githubUrl: "https://github.com/legp90/ecommerce-ecosystem",
+    image: "/ecommerce-ecosystem.png", // Recuerda verificar si va en la carpeta public o assets
     },
 
   ];
